@@ -3,8 +3,8 @@
 .button{
     cursor: pointer;
     border: none;
-    background-color: rgb(34, 31, 31);
-    color: white;
+    background-color: inherit;
+    color: #D1D1D0;
     align-items: center;
     border-radius: 5px;
     height: fit-content;
@@ -13,5 +13,5 @@
 
 .button:hover,
 .button:active{
-    background-color: rgb(80, 170, 128);
+    background-color: rgb(31,30,31,12);
 }

@@ -1,8 +1,15 @@
-import Header from './Layout/Header';
+import { Fragment } from "react";
+import AnimeList from "./Components/Animes/AnimeList";
+import ListSummary from "./Components/ListSummary";
+import Header from "./Layout/Header";
 
 function App() {
   return (
-    <Header/>
+    <Fragment>
+      <Header />
+      <ListSummary userName = "Jayesh"/>
+      <AnimeList />
+    </Fragment>
   );
 }
 

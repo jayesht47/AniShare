@@ -1,0 +1,9 @@
+
+.listSummary{
+
+    margin-top: 10rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: rgb(131,131,131);
+}

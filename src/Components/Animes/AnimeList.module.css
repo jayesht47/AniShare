@@ -1,0 +1,14 @@
+
+
+.animeList{
+    margin-top: 5%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #D1D1D0;
+    align-self: center;
+}
+
+.animeList li{
+    list-style: none;
+}
