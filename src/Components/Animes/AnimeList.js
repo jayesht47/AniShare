@@ -1,5 +1,6 @@
 import Card from "../../UI/Card";
 import classes from "./AnimeList.module.css";
+import AnimeItem from "./AnimeItem";
 
 const DUMMY_DATA = [
   {
@@ -28,7 +29,12 @@ const AnimeList = () => {
       <Card>
         <ul>
           {DUMMY_DATA.map((element) => (
-            <li key={element.id}>{element.name}</li>
+            <AnimeItem
+              key={element.id}
+              name={element.name}
+              malRating={element.malRating}
+              malLink={element.malLink}
+            />
           ))}
         </ul>
       </Card>
