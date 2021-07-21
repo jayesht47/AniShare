@@ -1,0 +1,17 @@
+
+
+.button{
+    cursor: pointer;
+    border: none;
+    background-color: rgb(34, 31, 31);
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    height: fit-content;
+    align-self: center;
+}
+
+.button:hover,
+.button:active{
+    background-color: rgb(80, 170, 128);
+}

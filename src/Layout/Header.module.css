@@ -1,0 +1,23 @@
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+    color: white;
+    flex-direction: row;
+}
+
+.header h1{
+    flex-grow: 3;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+
+}
