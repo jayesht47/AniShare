@@ -8,6 +8,7 @@ const Header = () => {
       <div className = {classes.menu}>
         <Button content = "Create" />
         <Button content = "Share" />
+        <Button content = "Logout" />
       </div>
     </div>
   );

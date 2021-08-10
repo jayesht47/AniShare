@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import AnimeList from "./Components/Animes/AnimeList";
+import AnimeList from "./Components/Anime/AnimeList";
 import ListSummary from "./Components/ListSummary";
 import Header from "./Layout/Header";
 
@@ -8,7 +8,7 @@ function App() {
     <Fragment>
       <Header />
       <ListSummary userName = "Jayesh"/>
-      <AnimeList />
+      <AnimeList userName = "Jayesh"/>
     </Fragment>
   );
 }
