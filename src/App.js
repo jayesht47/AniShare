@@ -1,14 +1,20 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import AnimeList from "./Components/Anime/AnimeList";
 import ListSummary from "./Components/ListSummary";
+import Login from "./Components/Login/Login";
 import Header from "./Layout/Header";
+import AuthContext from "./Store/auth-context";
 
 function App() {
+
+  const authContextData = useContext(AuthContext);
+
   return (
     <Fragment>
       <Header />
-      <ListSummary userName = "Jayesh"/>
-      <AnimeList userName = "Jayesh"/>
+      {! authContextData.isLoggedIn &&  <Login/>}
+      {authContextData.isLoggedIn && <ListSummary userName = "Jayesh"/>}
+      {authContextData.isLoggedIn && <AnimeList userName = "Jayesh"/>}
     </Fragment>
   );
 }

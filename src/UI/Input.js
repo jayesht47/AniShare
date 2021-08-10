@@ -2,7 +2,7 @@ import classses from './Input.module.css';
 
 const Input = (props) => {
   return (
-    <div>
+    <div className={classses.control}>
       <label htmlFor={props.label}>{props.label}</label>
       <input
         type={props.type}

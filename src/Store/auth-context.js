@@ -1,9 +1,10 @@
 import React,{ useState,useEffect } from "react";
 
-const AuthContext = React.createContext(
-    isLoggedIn = false,
-    onLogout = () =>  {},
-    onLogin(userName,password) = () => {}
+const AuthContext = React.createContext({
+    isLoggedIn : false,
+    onLogout : () =>  {},
+    onLogin : (userName,password) => {}
+}
 )
 
 const AuthContextProvider = props =>{
@@ -26,8 +27,9 @@ const AuthContextProvider = props =>{
 
     const loginHandler = (userName,password) =>{
 
+        console.info("Inside loginHandler");
         setIsLoggedIn(true);
-        localStorage.setItem("isLoggedIn",'0');
+        localStorage.setItem("isLoggedIn",'1');
     }
 
 
@@ -35,7 +37,8 @@ const AuthContextProvider = props =>{
         <AuthContext.Provider
             value ={{
                 isLoggedIn:isLoggedIn,
-                onLogout : logoutHandler,
+                onLogin : loginHandler,
+                onLogout : logoutHandler
 
             }}>
             {props.children}
