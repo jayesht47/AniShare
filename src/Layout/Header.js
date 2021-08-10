@@ -13,7 +13,7 @@ const Header = () => {
       <div className = {classes.menu}>
         {authContextData.isLoggedIn && <Button content = "Create" />}
         {authContextData.isLoggedIn && <Button content = "Share" />}
-        {authContextData.isLoggedIn && <Button content = "Logout" />}
+        {authContextData.isLoggedIn && <Button content = "Logout" onClick = {authContextData.onLogout} />}
       </div>
     </div>
   );
