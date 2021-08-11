@@ -29,8 +29,8 @@ const Login = (props) => {
     }
 
   return (
-    <div className={classes.loginForm}>
-      <form onSubmit={submitHandler}>
+    <div >
+      <form onSubmit={submitHandler} className={classes.loginForm}>
         <Input type="text" label="User Name" value = {userName} onChange = {userNameChangeHandler} />
         <Input type="password" label="Password" value = {password} onChange ={passwordChangeHandler}/>
         <Button content="Login" />

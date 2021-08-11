@@ -2,11 +2,13 @@
 
 .animeList{
     margin-top: 5%;
-    align-items: center;
     display: flex;
     justify-content: center;
     color: #D1D1D0;
     align-self: center;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .animeList li{

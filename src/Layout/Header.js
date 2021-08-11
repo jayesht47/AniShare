@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <div className={classes.header}>
-      <h1 >AniShare</h1>
+      <h1>AniShare</h1>
       <div className = {classes.menu}>
         {authContextData.isLoggedIn && <Button content = "Create" />}
         {authContextData.isLoggedIn && <Button content = "Share" />}

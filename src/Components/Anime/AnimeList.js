@@ -27,7 +27,7 @@ const AnimeList = () => {
   return (
     <section className={classes.animeList}>
       <Card>
-        <ul>
+        <div>
           {DUMMY_DATA.map((element) => (
             <AnimeItem
               key={element.id}
@@ -36,7 +36,7 @@ const AnimeList = () => {
               malLink={element.malLink}
             />
           ))}
-        </ul>
+        </div>
       </Card>
     </section>
   );

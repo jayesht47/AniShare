@@ -13,6 +13,7 @@
 
 .header h1{
     flex-grow: 3;
+    cursor: default;
 }
 
 

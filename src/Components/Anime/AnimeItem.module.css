@@ -8,7 +8,14 @@
     flex-direction: row;
 }
 
+.animeInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+
 .animeName{
+    margin-left: 1rem;
     font-size: larger;
     font-weight: 700;
     flex-grow: 1;
@@ -17,8 +24,8 @@
 
 .rating{
     width: 4rem;
-    font-size: larger;
-    font-weight: 700;
+    font-size: smaller;
+    font-weight: 400;
     cursor: pointer;
     text-align: center;
 }
