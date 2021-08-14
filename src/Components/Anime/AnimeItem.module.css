@@ -1,5 +1,16 @@
 
 
+@media only screen and (max-width:720px)
+{
+    .animeItem{
+        display: block !important;
+    }
+
+    .animeName{
+        text-align: center;
+    }
+}
+
 .animeItem{
     border-bottom: solid;
     border-width: 1px;

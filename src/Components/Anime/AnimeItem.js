@@ -1,4 +1,3 @@
-import Card from "../../UI/Card";
 import classes from "./AnimeItem.module.css";
 import ImageCard from "../../UI/ImageCard";
 import SmartText from "../Util/SmartText";
@@ -24,9 +23,9 @@ adapt to his new reality, fight for his survival, and hopefully
 break free from his virtual hell`;
 
 const AnimeItem = (props) => {
-  const ratingClickHandler = () => {
-    window.open(props.malLink);
-  };
+  // const ratingClickHandler = () => {
+  //   window.open(props.malLink);
+  // };
 
   return (
     <li>
@@ -35,9 +34,6 @@ const AnimeItem = (props) => {
         <div>
           <div className={classes.animeName}>{props.name}</div>
           <SmartText content = {DUMMY_INFO} />
-          <div className={classes.rating}>
-            <Card onClick={ratingClickHandler}>{props.malRating}</Card>
-          </div>
         </div>
       </div>
     </li>

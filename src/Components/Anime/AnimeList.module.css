@@ -1,5 +1,14 @@
 
 
+@media screen and ( max-width: 768px){
+
+    .animeList{
+        max-width: 80% !important;
+    }
+    
+}
+
+
 .animeList{
     margin-top: 5%;
     display: flex;
