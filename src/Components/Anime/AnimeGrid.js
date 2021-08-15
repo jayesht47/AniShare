@@ -1,6 +1,6 @@
 import Card from "../../UI/Card";
-import classes from "./AnimeList.module.css";
-import AnimeItem from "./AnimeItem";
+import classes from "./AnimeGrid.module.css";
+import AnimeGridItem from "./AnimeGridItem";
 
 const DUMMY_DATA = [
   {
@@ -27,25 +27,29 @@ const DUMMY_DATA = [
     malLink: "https://myanimelist.net/anime/46471/",
     id: 46471,
   },
+  {
+    name: "Tantei wa Mou, Shindeiru.",
+    malRating: 7.52,
+    malLink: "https://myanimelist.net/anime/46471/",
+    id: 46471,
+  },
 ];
 
-const AnimeList = () => {
+const AnimeGrid = () => {
   return (
-    <section className={classes.animeList}>
-      <Card>
-        <div>
-          {DUMMY_DATA.map((element) => (
-            <AnimeItem
+    <div className={classes.animeGrid}>
+        {DUMMY_DATA.map((element) => {
+          return (
+            <AnimeGridItem
               key={element.id}
               name={element.name}
               malRating={element.malRating}
               malLink={element.malLink}
             />
-          ))}
-        </div>
-      </Card>
-    </section>
+          );
+        })}
+    </div>
   );
 };
 
-export default AnimeList;
+export default AnimeGrid;

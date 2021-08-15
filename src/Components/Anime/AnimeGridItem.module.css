@@ -1,0 +1,45 @@
+
+
+@media only screen and (max-width:720px)
+{
+    .animeGridItem{
+        display: block !important;
+    }
+
+    .animeName{
+        text-align: center;
+    }
+}
+
+.animeGridItem{
+    /* border: solid; */
+    border-width: 1px;
+    margin: 1% ;
+    display: flex;
+    flex-direction: row;
+}
+
+.animeInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.animeName{
+    margin-left: 1rem;
+    font-size: smaller;
+    font-weight: 700;
+    display: flex;
+    /* flex-grow: 1; */
+    /* max-width: 50%; */
+}
+
+
+.rating{
+    width: 4rem;
+    font-size: smaller;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+}
+

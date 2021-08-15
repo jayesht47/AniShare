@@ -1,5 +1,10 @@
 
 
+.Rating{
+    text-align: center;
+    color: #af42ed;
+    font-weight: 700;
+}
 
 @media(max-width:720px)
 {

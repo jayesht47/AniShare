@@ -1,4 +1,5 @@
 import { Fragment, useContext } from "react";
+import AnimeGrid from "./Components/Anime/AnimeGrid";
 import AnimeList from "./Components/Anime/AnimeList";
 import ListSummary from "./Components/ListSummary";
 import Login from "./Components/Login/Login";
@@ -14,7 +15,8 @@ function App() {
       <Header />
       {! authContextData.isLoggedIn &&  <Login/>}
       {authContextData.isLoggedIn && <ListSummary userName = "Jayesh"/>}
-      {authContextData.isLoggedIn && <AnimeList userName = "Jayesh"/>}
+      {/* {authContextData.isLoggedIn && <AnimeList userName = "Jayesh"/>} */}
+      {authContextData.isLoggedIn && <AnimeGrid userName = "Jayesh"/>}
     </Fragment>
   );
 }
