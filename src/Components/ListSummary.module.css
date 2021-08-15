@@ -5,5 +5,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    color: rgb(131,131,131);
+    /* color: rgb(131,131,131); */
+    color: #D1D1D0;
+    font-weight: 700;
 }
