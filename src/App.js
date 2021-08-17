@@ -1,6 +1,6 @@
 import { Fragment, useContext } from "react";
 import AnimeGrid from "./Components/Anime/AnimeGrid";
-import AnimeList from "./Components/Anime/AnimeList";
+// import AnimeList from "./Components/Anime/AnimeList";
 import ListSummary from "./Components/ListSummary";
 import Login from "./Components/Login/Login";
 import Header from "./Layout/Header";

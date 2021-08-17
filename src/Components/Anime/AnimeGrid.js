@@ -1,4 +1,4 @@
-import Card from "../../UI/Card";
+// import Card from "../../UI/Card";
 import classes from "./AnimeGrid.module.css";
 import AnimeGridItem from "./AnimeGridItem";
 
@@ -19,7 +19,7 @@ const DUMMY_DATA = [
     name: "Tantei wa Mou, Shindeiru.",
     malRating: 7.52,
     malLink: "https://myanimelist.net/anime/46471/",
-    id: 46471,
+    id: 4471,
   },
   {
     name: "Tantei wa Mou, Shindeiru.",
@@ -31,7 +31,7 @@ const DUMMY_DATA = [
     name: "Tantei wa Mou, Shindeiru.",
     malRating: 7.52,
     malLink: "https://myanimelist.net/anime/46471/",
-    id: 46471,
+    id: 4641,
   },
 ];
 

@@ -1,4 +1,4 @@
-import Card from "../UI/Card";
+// import Card from "../UI/Card";
 import classes from './ListSummary.module.css';
 
 const ListSummary = (props) => {
