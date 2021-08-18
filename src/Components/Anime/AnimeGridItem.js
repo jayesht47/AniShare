@@ -31,7 +31,7 @@ const AnimeGridItem = (props) => {
   return (
     <Card>
       <div className={classes.animeGridItem}>
-        <ImageCard imageURI="https://media.kitsu.io/anime/poster_images/6589/tiny.jpg?1597696850" />
+        <ImageCard imageURI={props.imageURI} />
         <div>
           <div className={classes.animeName}>{props.name} <span className={classes.animeYear}>2002</span></div>
           <div className={classes.animeInfoContainer}>
