@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AuthContextProvider } from "./Store/auth-context";
+import { AnimeListContextProvider } from "./Store/anime-list";
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
+      <AnimeListContextProvider>
       <App />
+      </AnimeListContextProvider>
     </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById("root")

@@ -5,19 +5,24 @@ import ListSummary from "./Components/ListSummary";
 import Login from "./Components/Login/Login";
 import Header from "./Layout/Header";
 import AuthContext from "./Store/auth-context";
+import AnimeListContext from "./Store/anime-list";
 import { useState,useCallback,useEffect } from "react";
 
 
 function App() {
 
   const authContextData = useContext(AuthContext);
+  const AnimeListContextData = useContext(AnimeListContext);
 
   const [animeList,setAnimeList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const fetchAnimeHandler = useCallback(async () => {
-    const userAnimeList = [6589, 41024];
+    // const userAnimeList = [6589, 41024];
+    AnimeListContextData.setUserAnimeList([6589, 41024]);
+    
+    const userAnimeList = [6589, 41024]; //use Data result from user service call when implemented else latest state issue will occur
 
     setIsLoading(true);
     setError(null);

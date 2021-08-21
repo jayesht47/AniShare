@@ -3,6 +3,7 @@ import ImageCard from "../../UI/ImageCard";
 // import SmartText from "../Util/SmartText";
 import Card from "../../UI/Card";
 import Delete from "../../UI/Delete";
+import reactDom from "react-dom";
 
 // const DUMMY_INFO = `In the year 2022, virtual reality has progressed by leaps and
 // bounds, and a massive online role-playing game called Sword Art
@@ -44,6 +45,7 @@ const AnimeGridItem = (props) => {
           </div>
         </div>
       </div>
+      <div id="deleteDiv"></div>
     </Card>
   );
 };
