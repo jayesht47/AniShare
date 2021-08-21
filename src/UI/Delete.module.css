@@ -1,0 +1,10 @@
+
+
+.delete{
+  display: flex;
+  flex-flow: row-reverse;
+}
+
+.delete .hover{
+  cursor: pointer;
+}

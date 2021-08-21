@@ -49,6 +49,7 @@ const AnimeGrid = (props) => {
             episodeCount = {element.episodeCount}
             ageRating = {element.ageRating}
             AverageRating = {element.averageRating}
+            year = {new Date(element.startingDate).getFullYear()}
           />
         );
       })}

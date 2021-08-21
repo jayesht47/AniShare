@@ -17,7 +17,7 @@ function App() {
   const [error, setError] = useState(null);
 
   const fetchAnimeHandler = useCallback(async () => {
-    const userAnimeList = [6589, 294];
+    const userAnimeList = [6589, 41024];
 
     setIsLoading(true);
     setError(null);
@@ -43,7 +43,8 @@ function App() {
           status : animeData.status,
           ageRating : animeData.ageRating,
           episodeCount : animeData.episodeCount,
-          averageRating : animeData.rating
+          averageRating : animeData.rating,
+          startingDate : animeData.startingDate
 
         });
 

@@ -2,6 +2,7 @@ import classes from "./AnimeGridItem.module.css";
 import ImageCard from "../../UI/ImageCard";
 // import SmartText from "../Util/SmartText";
 import Card from "../../UI/Card";
+import Delete from "../../UI/Delete";
 
 // const DUMMY_INFO = `In the year 2022, virtual reality has progressed by leaps and
 // bounds, and a massive online role-playing game called Sword Art
@@ -33,7 +34,7 @@ const AnimeGridItem = (props) => {
       <div className={classes.animeGridItem}>
         <ImageCard imageURI={props.imageURI} />
         <div>
-          <div className={classes.animeName}>{props.name} <span className={classes.animeYear}>2002</span></div>
+          <div className={classes.animeName}>{props.name} <span className={classes.animeYear}>{props.year}</span></div>
           <div className={classes.animeInfoContainer}>
           <div className ={classes.animeInfo}>Status <span className={classes.field}>{props.status}</span></div>
           <div className ={classes.animeInfo}>Episodes <span className={classes.field}>{props.episodeCount}</span></div>
