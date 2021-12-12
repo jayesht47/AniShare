@@ -6,6 +6,14 @@
     font-weight: 700;
 }
 
+.imageCard{
+    margin: 0.5rem;
+}
+
+.imageCard img{
+    border-radius: 5px;
+}
+
 @media(max-width:720px)
 {
     .imageCard{

@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AuthContextProvider } from "./Store/auth-context";
 import { AnimeListContextProvider } from "./Store/anime-list";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
       <AnimeListContextProvider>
-      <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </AnimeListContextProvider>
     </AuthContextProvider>
   </React.StrictMode>,

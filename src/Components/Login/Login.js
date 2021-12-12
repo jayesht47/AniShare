@@ -3,10 +3,15 @@ import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import classes from "./Login.module.css";
 import AuthContext from "../../Store/auth-context";
+import { useHistory } from "react-router";
+
+
 
 const Login = (props) => {
 
     const authContextData = useContext(AuthContext);
+
+    const history = useHistory();
 
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
@@ -25,7 +30,7 @@ const Login = (props) => {
         console.info("Inside submit Handler");
         event.preventDefault();
         authContextData.onLogin(userName,password);
-
+        history.push("/list");
     }
 
   return (
