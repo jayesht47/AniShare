@@ -7,25 +7,25 @@ import Header from "./Layout/Header";
 import AuthContext from "./Store/auth-context";
 import AnimeListContext from "./Store/anime-list";
 import { useState, useCallback, useEffect } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
   const authContextData = useContext(AuthContext);
   const AnimeListContextData = useContext(AnimeListContext);
 
   const [animeList, setAnimeList] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState(null);
+
+  AnimeListContextData.setUserAnimeList([6589, 41024, 44297, 44393]);
 
   const fetchAnimeHandler = useCallback(async () => {
-    // const userAnimeList = [6589, 41024, 44297,];
-    AnimeListContextData.setUserAnimeList([6589, 41024, 44297, 44393]);
 
     //use Data result from user service call when implemented else latest state issue will occur
     const userAnimeList = [6589, 41024, 44297, 44393];
 
-    setIsLoading(true);
-    setError(null);
+    // setIsLoading(true);
+    // setError(null);
 
     try {
       const userAnimeListData = [];
@@ -55,9 +55,9 @@ function App() {
         setAnimeList(userAnimeListData);
       }
     } catch (error) {
-      setError(error.message);
+      // setError(error.message);
     }
-    setIsLoading(false);
+    // setIsLoading(false);
   }, []);
 
   useEffect(() => {
@@ -72,14 +72,19 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <Route path="/login">{!authContextData.isLoggedIn && <Login />}</Route>
-      <Route path="/list">
-        <Fragment>
-          {authContextData.isLoggedIn && <ListSummary userName="Jayesh" />}
-          {/* {authContextData.isLoggedIn && <AnimeList userName = "Jayesh"/>} */}
-          {authContextData.isLoggedIn && content}
-        </Fragment>
-      </Route>
+      <Switch>
+        <Route path="/login">{!authContextData.isLoggedIn && <Login />}</Route>
+        <Route path="/list">
+          <Fragment>
+            {authContextData.isLoggedIn && <ListSummary userName="Jayesh" />}
+            {/* {authContextData.isLoggedIn && <AnimeList userName = "Jayesh"/>} */}
+            {authContextData.isLoggedIn && content}
+          </Fragment>
+        </Route>
+        <Route path="/" exact>
+          <Redirect to="/login" />
+        </Route>
+      </Switch>
     </Fragment>
   );
 }
