@@ -5,19 +5,21 @@ import ListSummary from "./Components/ListSummary";
 import Login from "./Components/Login/Login";
 import Header from "./Layout/Header";
 import AuthContext from "./Store/auth-context";
-import AnimeListContext from "./Store/anime-list";
+// import AnimeListContext from "./Store/anime-list";
 import { useState, useCallback, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import MainWrapper from "./Layout/MainWrapper";
+
 
 function App() {
   const authContextData = useContext(AuthContext);
-  const AnimeListContextData = useContext(AnimeListContext);
+  // const AnimeListContextData = useContext(AnimeListContext);
 
   const [animeList, setAnimeList] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState(null);
 
-  AnimeListContextData.setUserAnimeList([6589, 41024, 44297, 44393]);
+  // AnimeListContextData.setUserAnimeList();
 
   const fetchAnimeHandler = useCallback(async () => {
 
@@ -70,7 +72,7 @@ function App() {
     content = <AnimeGrid userAnimeListData={animeList} userName="Jayesh" />;
 
   return (
-    <Fragment>
+    <MainWrapper>
       <Header />
       <Switch>
         <Route path="/login">{!authContextData.isLoggedIn && <Login />}</Route>
@@ -85,7 +87,7 @@ function App() {
           <Redirect to="/login" />
         </Route>
       </Switch>
-    </Fragment>
+    </MainWrapper>
   );
 }
 

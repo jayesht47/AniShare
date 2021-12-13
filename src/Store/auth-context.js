@@ -23,6 +23,7 @@ const AuthContextProvider = props =>{
 
         setIsLoggedIn(false);
         localStorage.setItem("isLoggedIn",'0');
+        
     }
 
     const loginHandler = (userName,password) =>{
