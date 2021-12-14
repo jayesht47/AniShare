@@ -1,4 +1,3 @@
-import classses from './Input.module.css';
 
 const Input = (props) => {
   return (
