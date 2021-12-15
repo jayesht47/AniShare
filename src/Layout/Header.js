@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <div className="text-white flex flex-row">
       <h1 className="text-3xl p-5 grow">AniShare</h1>
-      <div className="flex flex-row">
+      <div className="mt-2 flex lg:flex-row xs:flex-col">
         {authContextData.isLoggedIn && <Button content="Create" />}
         {authContextData.isLoggedIn && <Button content="Share" />}
         {authContextData.isLoggedIn && (
