@@ -13,7 +13,7 @@ const AnimeGrid = (props) => {
 
 
   return (
-    <div className={classes.animeGrid}>
+    <div className="mt-5 flex flex-row m-auto justify-center">
       {props.userAnimeListData.map((element) => {
         return (
           <ImageCard  imageURI={element.imageURI} />
