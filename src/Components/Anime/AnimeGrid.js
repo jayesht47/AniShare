@@ -5,28 +5,24 @@ import classes from "./AnimeGrid.module.css";
 // import AnimeGridItem from "./AnimeGridItem";
 
 import { useHistory } from "react-router-dom"
+import AnimeItem from "./AnimeItem";
 
 
 const AnimeGrid = (props) => {
 
   const history = useHistory();
 
+  const cardClickHandler = slug =>{
+    console.log(slug);
+    history.push(`/anime/${slug}`);
+
+  }
 
   return (
     <div className="mt-5 flex flex-row m-auto justify-center">
       {props.userAnimeListData.map((element) => {
         return (
-          <ImageCard  imageURI={element.imageURI} />
-          // <AnimeGridItem
-          //   key={element.id}
-          //   name={element.name}
-          //   imageURI={element.imageURI}
-          //   status = {element.status}
-          //   episodeCount = {element.episodeCount}
-          //   ageRating = {element.ageRating}
-          //   AverageRating = {element.averageRating}
-          //   year = {new Date(element.startingDate).getFullYear()}
-          // />
+          <ImageCard onClick={cardClickHandler} imageURI={element.imageURI} slug={element.slug} />
         );
       })}
     </div>
