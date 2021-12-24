@@ -15,7 +15,7 @@ const AuthContextProvider = props =>{
 
         const storedLoginInfo = localStorage.getItem("isLoggedIn");
 
-        if('storedLoginInfo' === '1') setIsLoggedIn(true);
+        if(storedLoginInfo === '1') setIsLoggedIn(true);
 
     },[]);
 

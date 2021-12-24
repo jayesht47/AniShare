@@ -1,28 +1,32 @@
 // import Card from "../../UI/Card";
 // import { useCallback, useEffect, useState } from "react";
 import ImageCard from "../../UI/ImageCard";
-import classes from "./AnimeGrid.module.css";
 // import AnimeGridItem from "./AnimeGridItem";
-
-import { useHistory } from "react-router-dom"
-import AnimeItem from "./AnimeItem";
-
+import { useHistory } from "react-router-dom";
 
 const AnimeGrid = (props) => {
-
   const history = useHistory();
 
-  const cardClickHandler = slug =>{
-    console.log(slug);
-    history.push(`/anime/${slug}`);
+  const cardClickHandler = (animeData) => {
+    console.log(animeData);
+    history.push({
+      pathname : `/anime/${animeData.slug}`,
+      state: { animeData: animeData }
 
-  }
+    });
+  };
+
 
   return (
     <div className="mt-5 flex flex-row m-auto justify-center">
       {props.userAnimeListData.map((element) => {
         return (
-          <ImageCard onClick={cardClickHandler} imageURI={element.imageURI} slug={element.slug} />
+          <ImageCard
+            key={element.slug}
+            onClick={cardClickHandler}
+            imageURI={element.imageURI}
+            animeData={element}
+          />
         );
       })}
     </div>

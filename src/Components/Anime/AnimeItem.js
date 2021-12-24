@@ -1,6 +1,7 @@
 import classes from "./AnimeItem.module.css";
 import ImageCard from "../../UI/ImageCard";
 import SmartText from "../Util/SmartText";
+import { useLocation } from "react-router-dom";
 
 const DUMMY_INFO = `In the year 2022, virtual reality has progressed by leaps and
 bounds, and a massive online role-playing game called Sword Art
@@ -23,6 +24,13 @@ adapt to his new reality, fight for his survival, and hopefully
 break free from his virtual hell`;
 
 const AnimeItem = (props) => {
+
+  const location = useLocation();
+
+  const animeData = location.state.animeData;
+
+  console.log(props);
+
   // const ratingClickHandler = () => {
   //   window.open(props.malLink);
   // };
@@ -30,9 +38,9 @@ const AnimeItem = (props) => {
   return (
     <li>
       <div className={classes.animeItem}>
-        <ImageCard imageURI="https://media.kitsu.io/anime/poster_images/6589/tiny.jpg?1597696850" />
+        <img src="https://media.kitsu.io/anime/poster_images/6589/tiny.jpg?1597696850" />
         <div>
-          <div className={classes.animeName}>{props.name}</div>
+          <div className={classes.animeName}>{animeData.name}</div>
           <SmartText content = {DUMMY_INFO} />
         </div>
       </div>
