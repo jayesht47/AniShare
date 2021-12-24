@@ -12,7 +12,6 @@ const AnimeGrid = (props) => {
     history.push({
       pathname : `/anime/${animeData.slug}`,
       state: { animeData: animeData }
-
     });
   };
 
@@ -24,7 +23,7 @@ const AnimeGrid = (props) => {
           <ImageCard
             key={element.slug}
             onClick={cardClickHandler}
-            imageURI={element.imageURI}
+            imageURI={element.posterImage.tiny}
             animeData={element}
           />
         );

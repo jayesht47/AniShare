@@ -1,5 +1,3 @@
-import classes from "./AnimeItem.module.css";
-import ImageCard from "../../UI/ImageCard";
 import SmartText from "../Util/SmartText";
 import { useLocation } from "react-router-dom";
 
@@ -24,27 +22,24 @@ adapt to his new reality, fight for his survival, and hopefully
 break free from his virtual hell`;
 
 const AnimeItem = (props) => {
-
   const location = useLocation();
 
   const animeData = location.state.animeData;
 
-  console.log(props);
+  console.log(animeData);
 
   // const ratingClickHandler = () => {
   //   window.open(props.malLink);
   // };
 
   return (
-    <li>
-      <div className={classes.animeItem}>
-        <img src="https://media.kitsu.io/anime/poster_images/6589/tiny.jpg?1597696850" />
-        <div>
-          <div className={classes.animeName}>{animeData.name}</div>
-          <SmartText content = {DUMMY_INFO} />
-        </div>
+    <div className="">
+      <img src={animeData.posterImage.tiny} alt={`${animeData.name}`} />
+      <div>
+        <div className="">{animeData.name}</div>
+        <SmartText content={animeData.animeDesc} />
       </div>
-    </li>
+    </div>
   );
 };
 
