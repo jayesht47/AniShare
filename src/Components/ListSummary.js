@@ -4,7 +4,7 @@ import classes from './ListSummary.module.css';
 const ListSummary = (props) => {
 
   return (
-    <section className = {classes.listSummary}>
+    <section className = "mt-2 text-[#D1D1D0] flex text-3xl font-bold justify-center">
         <p> {`Welcome to  ${props.userName}'s Anime List.`}</p>
     </section>
   );
