@@ -93,6 +93,126 @@ function App() {
         "\"I'm going to live for myself!\"\n\nThe greatest assassin on Earth knew only how to live as a tool for his employers—until they stopped letting him live. Reborn by the grace of a goddess into a world of swords and sorcery, he's offered a chance to do things differently this time around, but there's a catch...He has to eliminate a super-powerful hero who will bring about the end of the world unless he is stopped.\n\nNow known as Lugh Tuatha Dé, the master assassin certainly has his hands full, particularly because of all the beautiful girls who constantly surround him. Lugh may have been an incomparable killer, but how will he fare against foes with powerful magic?\n\n(Source: Yen Press)",
       slug: "sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru",
     },
+    {
+      id: 44393,
+      posterImage: {
+        tiny: "https://media.kitsu.io/anime/poster_images/44393/tiny.jpg",
+        small: "https://media.kitsu.io/anime/poster_images/44393/small.jpg",
+        medium: "https://media.kitsu.io/anime/poster_images/44393/medium.jpg",
+        large: "https://media.kitsu.io/anime/poster_images/44393/large.jpg",
+        orignal:
+          "https://media.kitsu.io/anime/poster_images/44393/original.jpg",
+      },
+      name: "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      status: "finished",
+      ageRating: "PG",
+      episodeCount: 12,
+      averageRating: 77.09,
+      startingDate: "2021-10-06",
+      animeDesc:
+        "\"I'm going to live for myself!\"\n\nThe greatest assassin on Earth knew only how to live as a tool for his employers—until they stopped letting him live. Reborn by the grace of a goddess into a world of swords and sorcery, he's offered a chance to do things differently this time around, but there's a catch...He has to eliminate a super-powerful hero who will bring about the end of the world unless he is stopped.\n\nNow known as Lugh Tuatha Dé, the master assassin certainly has his hands full, particularly because of all the beautiful girls who constantly surround him. Lugh may have been an incomparable killer, but how will he fare against foes with powerful magic?\n\n(Source: Yen Press)",
+      slug: "sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru",
+    },
+    {
+      id: 44393,
+      posterImage: {
+        tiny: "https://media.kitsu.io/anime/poster_images/44393/tiny.jpg",
+        small: "https://media.kitsu.io/anime/poster_images/44393/small.jpg",
+        medium: "https://media.kitsu.io/anime/poster_images/44393/medium.jpg",
+        large: "https://media.kitsu.io/anime/poster_images/44393/large.jpg",
+        orignal:
+          "https://media.kitsu.io/anime/poster_images/44393/original.jpg",
+      },
+      name: "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      status: "finished",
+      ageRating: "PG",
+      episodeCount: 12,
+      averageRating: 77.09,
+      startingDate: "2021-10-06",
+      animeDesc:
+        "\"I'm going to live for myself!\"\n\nThe greatest assassin on Earth knew only how to live as a tool for his employers—until they stopped letting him live. Reborn by the grace of a goddess into a world of swords and sorcery, he's offered a chance to do things differently this time around, but there's a catch...He has to eliminate a super-powerful hero who will bring about the end of the world unless he is stopped.\n\nNow known as Lugh Tuatha Dé, the master assassin certainly has his hands full, particularly because of all the beautiful girls who constantly surround him. Lugh may have been an incomparable killer, but how will he fare against foes with powerful magic?\n\n(Source: Yen Press)",
+      slug: "sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru",
+    },
+    {
+      id: 44393,
+      posterImage: {
+        tiny: "https://media.kitsu.io/anime/poster_images/44393/tiny.jpg",
+        small: "https://media.kitsu.io/anime/poster_images/44393/small.jpg",
+        medium: "https://media.kitsu.io/anime/poster_images/44393/medium.jpg",
+        large: "https://media.kitsu.io/anime/poster_images/44393/large.jpg",
+        orignal:
+          "https://media.kitsu.io/anime/poster_images/44393/original.jpg",
+      },
+      name: "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      status: "finished",
+      ageRating: "PG",
+      episodeCount: 12,
+      averageRating: 77.09,
+      startingDate: "2021-10-06",
+      animeDesc:
+        "\"I'm going to live for myself!\"\n\nThe greatest assassin on Earth knew only how to live as a tool for his employers—until they stopped letting him live. Reborn by the grace of a goddess into a world of swords and sorcery, he's offered a chance to do things differently this time around, but there's a catch...He has to eliminate a super-powerful hero who will bring about the end of the world unless he is stopped.\n\nNow known as Lugh Tuatha Dé, the master assassin certainly has his hands full, particularly because of all the beautiful girls who constantly surround him. Lugh may have been an incomparable killer, but how will he fare against foes with powerful magic?\n\n(Source: Yen Press)",
+      slug: "sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru",
+    },
+    {
+      id: 44393,
+      posterImage: {
+        tiny: "https://media.kitsu.io/anime/poster_images/44393/tiny.jpg",
+        small: "https://media.kitsu.io/anime/poster_images/44393/small.jpg",
+        medium: "https://media.kitsu.io/anime/poster_images/44393/medium.jpg",
+        large: "https://media.kitsu.io/anime/poster_images/44393/large.jpg",
+        orignal:
+          "https://media.kitsu.io/anime/poster_images/44393/original.jpg",
+      },
+      name: "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      status: "finished",
+      ageRating: "PG",
+      episodeCount: 12,
+      averageRating: 77.09,
+      startingDate: "2021-10-06",
+      animeDesc:
+        "\"I'm going to live for myself!\"\n\nThe greatest assassin on Earth knew only how to live as a tool for his employers—until they stopped letting him live. Reborn by the grace of a goddess into a world of swords and sorcery, he's offered a chance to do things differently this time around, but there's a catch...He has to eliminate a super-powerful hero who will bring about the end of the world unless he is stopped.\n\nNow known as Lugh Tuatha Dé, the master assassin certainly has his hands full, particularly because of all the beautiful girls who constantly surround him. Lugh may have been an incomparable killer, but how will he fare against foes with powerful magic?\n\n(Source: Yen Press)",
+      slug: "sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru",
+    },
+    {
+      id: 44393,
+      posterImage: {
+        tiny: "https://media.kitsu.io/anime/poster_images/44393/tiny.jpg",
+        small: "https://media.kitsu.io/anime/poster_images/44393/small.jpg",
+        medium: "https://media.kitsu.io/anime/poster_images/44393/medium.jpg",
+        large: "https://media.kitsu.io/anime/poster_images/44393/large.jpg",
+        orignal:
+          "https://media.kitsu.io/anime/poster_images/44393/original.jpg",
+      },
+      name: "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      status: "finished",
+      ageRating: "PG",
+      episodeCount: 12,
+      averageRating: 77.09,
+      startingDate: "2021-10-06",
+      animeDesc:
+        "\"I'm going to live for myself!\"\n\nThe greatest assassin on Earth knew only how to live as a tool for his employers—until they stopped letting him live. Reborn by the grace of a goddess into a world of swords and sorcery, he's offered a chance to do things differently this time around, but there's a catch...He has to eliminate a super-powerful hero who will bring about the end of the world unless he is stopped.\n\nNow known as Lugh Tuatha Dé, the master assassin certainly has his hands full, particularly because of all the beautiful girls who constantly surround him. Lugh may have been an incomparable killer, but how will he fare against foes with powerful magic?\n\n(Source: Yen Press)",
+      slug: "sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru",
+    },
+    {
+      id: 44393,
+      posterImage: {
+        tiny: "https://media.kitsu.io/anime/poster_images/44393/tiny.jpg",
+        small: "https://media.kitsu.io/anime/poster_images/44393/small.jpg",
+        medium: "https://media.kitsu.io/anime/poster_images/44393/medium.jpg",
+        large: "https://media.kitsu.io/anime/poster_images/44393/large.jpg",
+        orignal:
+          "https://media.kitsu.io/anime/poster_images/44393/original.jpg",
+      },
+      name: "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+      status: "finished",
+      ageRating: "PG",
+      episodeCount: 12,
+      averageRating: 77.09,
+      startingDate: "2021-10-06",
+      animeDesc:
+        "\"I'm going to live for myself!\"\n\nThe greatest assassin on Earth knew only how to live as a tool for his employers—until they stopped letting him live. Reborn by the grace of a goddess into a world of swords and sorcery, he's offered a chance to do things differently this time around, but there's a catch...He has to eliminate a super-powerful hero who will bring about the end of the world unless he is stopped.\n\nNow known as Lugh Tuatha Dé, the master assassin certainly has his hands full, particularly because of all the beautiful girls who constantly surround him. Lugh may have been an incomparable killer, but how will he fare against foes with powerful magic?\n\n(Source: Yen Press)",
+      slug: "sekai-saikou-no-ansatsusha-isekai-kizoku-ni-tensei-suru",
+    },
   ]);
   // const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState(null);
@@ -146,7 +266,8 @@ function App() {
     content = <AnimeGrid userAnimeListData={animeList} userName="Jayesh" />;
 
   return (
-    <MainWrapper>
+    // <MainWrapper>
+    <Fragment>
       <Header />
       <Switch>
         <Route path="/login">{!authContextData.isLoggedIn && <Login />}</Route>
@@ -164,7 +285,8 @@ function App() {
           <Redirect to="/login" />
         </Route>
       </Switch>
-    </MainWrapper>
+    </Fragment>
+    // </MainWrapper>
   );
 }
 
