@@ -31,7 +31,7 @@ const AnimeGridItem = (props) => {
   // };
 
   return (
-    <Card>
+    <Card >
       <div className={classes.animeGridItem}>
         <ImageCard imageURI={props.imageURI} />
         <div>
