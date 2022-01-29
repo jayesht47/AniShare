@@ -27,7 +27,7 @@ const SmartText = (props) => {
 
   return (
     <div className="text-white">
-      <span>{span1Content}</span>
+      <span className="text-lg">{span1Content}</span>
       <br />
       {readMore && (
         <button className="hover:text-[#8202ad]" onClick={readMoreClickHandler}>

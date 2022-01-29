@@ -21,10 +21,36 @@ games: if they die in Aincrad, they die in real life. Kirito must
 adapt to his new reality, fight for his survival, and hopefully
 break free from his virtual hell`;
 
+//Rating colors going from 0-100
+const ratingColorArr = ["#f90621", "#c64707", "#bf8805", "#8ee815", "#0ab41d"];
+
 const AnimeItem = (props) => {
   const location = useLocation();
 
   const animeData = location.state.animeData;
+
+  const releaseDate = new Date(animeData.startingDate);
+
+  const month = releaseDate.toLocaleString("default", { month: "long" });
+  const year = releaseDate.getFullYear();
+  let colorIndex = -1;
+
+  if (0 < animeData.averageRating && animeData.averageRating <= 20) {
+    colorIndex = 0;
+  } else if (20 < animeData.averageRating && animeData.averageRating <= 40) {
+    colorIndex = 1;
+  } else if (40 < animeData.averageRating && animeData.averageRating <= 60) {
+    colorIndex = 2;
+  } else if (60 < animeData.averageRating && animeData.averageRating <= 80) {
+    colorIndex = 3;
+  } else if (60 < animeData.averageRating && animeData.averageRating <= 100) {
+    colorIndex = 4;
+  } else {
+    //possible negative value
+    throw Error("Got negative value for rating from API");
+  }
+
+  const specificRatingColorClassName = `text-[${ratingColorArr[colorIndex]}] pl-2`;
 
   console.log(animeData);
 
@@ -36,13 +62,25 @@ const AnimeItem = (props) => {
     <div className="p-3 flex flex-row">
       <div className="w-full mr-5">
         <img
-          className="w-full h-full"
-          src={animeData.posterImage.tiny}
+          className="w-full"
+          src={animeData.posterImage.medium}
           alt={`${animeData.name}`}
         />
       </div>
-      <div className="ml-5">
-        <div className="text-white text-3xl mb-5 ">{animeData.name}</div>
+      <div className="ml-5 text-white">
+        <div className="text-3xl mb-5 ">{animeData.name}</div>
+        <div className="text-xl flex flex-col mb-5">
+          <span>Episodes : {animeData.episodeCount}</span>
+          <span>
+            Release Date : {month} {year}
+          </span>
+          <span>
+            Rating : 
+            <span className={specificRatingColorClassName}>
+              {animeData.averageRating}
+            </span>
+          </span>
+        </div>
         <SmartText content={animeData.animeDesc} />
       </div>
     </div>
