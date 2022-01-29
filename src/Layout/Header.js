@@ -1,4 +1,3 @@
-import classes from "./Header.module.css";
 import Button from "../UI/Button";
 import AuthContext from "../Store/auth-context";
 import { useContext } from "react";
@@ -15,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <div className="text-white flex flex-row">
+    <div className="text-white flex flex-row mb-10">
       <h1 className="text-5xl p-5 grow">AniShare</h1>
       <div className="mt-2 flex lg:flex-row xs:flex-col">
         {authContextData.isLoggedIn && <Button content="Create" />}
