@@ -33,10 +33,16 @@ const AnimeItem = (props) => {
   // };
 
   return (
-    <div className="">
-      <img src={animeData.posterImage.tiny} alt={`${animeData.name}`} />
-      <div>
-        <div className="">{animeData.name}</div>
+    <div className="p-3 flex flex-row">
+      <div className="w-full mr-5">
+        <img
+          className="w-full h-full"
+          src={animeData.posterImage.tiny}
+          alt={`${animeData.name}`}
+        />
+      </div>
+      <div className="ml-5">
+        <div className="text-white text-3xl mb-5 ">{animeData.name}</div>
         <SmartText content={animeData.animeDesc} />
       </div>
     </div>

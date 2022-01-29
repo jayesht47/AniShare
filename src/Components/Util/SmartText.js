@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import classes from "./SmartText.module.css";
 
 const SmartText = (props) => {
   const [readMore, setReadMore] = useState(false);
@@ -27,18 +26,18 @@ const SmartText = (props) => {
   };
 
   return (
-    <div className={classes.smartText}>
+    <div className="text-white">
       <span>{span1Content}</span>
       <br />
       {readMore && (
-        <button className={classes.readMore} onClick={readMoreClickHandler}>
+        <button className="hover:text-[#8202ad]" onClick={readMoreClickHandler}>
           {" "}
           ... show more
         </button>
       )}
       {!readMore && <span>{span2Content}</span>}
       {!readMore && (
-        <button className={classes.readMore} onClick={readLessClickHandler}>
+        <button className="hover:text-[#8202ad]" onClick={readLessClickHandler}>
           show less
         </button>
       )}
