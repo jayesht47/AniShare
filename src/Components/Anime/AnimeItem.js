@@ -60,9 +60,9 @@ const AnimeItem = (props) => {
 
   return (
     <div className="p-3 flex flex-row">
-      <div className="w-full mr-5">
+      <div className="mr-5 min-w-fit">
         <img
-          className="w-full"
+          className=""
           src={animeData.posterImage.medium}
           alt={`${animeData.name}`}
         />
