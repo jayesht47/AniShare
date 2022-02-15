@@ -8,6 +8,10 @@ const Header = () => {
 
   const authContextData = useContext(AuthContext);
 
+  const homeClickHandler = ()  =>{
+    history.replace("/list");
+  }
+
   const logoutHandler = () => {
     authContextData.onLogout();
     history.replace("/login");
@@ -15,7 +19,10 @@ const Header = () => {
 
   return (
     <div className="text-white flex flex-row mb-10">
-      <h1 className="text-5xl p-5 grow">AniShare</h1>
+      <h1 className="text-5xl p-5 grow">
+        {" "}
+        <span className=" cursor-pointer" onClick={homeClickHandler}>AniShare</span>
+      </h1>
       <div className="mt-2 flex lg:flex-row xs:flex-col">
         {authContextData.isLoggedIn && <Button content="Create" />}
         {authContextData.isLoggedIn && <Button content="Share" />}

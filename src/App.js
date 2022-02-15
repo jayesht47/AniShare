@@ -1,13 +1,11 @@
 import { Fragment, useContext } from "react";
 import AnimeGrid from "./Components/Anime/AnimeGrid";
-// import AnimeList from "./Components/Anime/AnimeList";
 import ListSummary from "./Components/ListSummary";
 import Login from "./Components/Login/Login";
 import Header from "./Layout/Header";
 import AuthContext from "./Store/auth-context";
 import { useState, useCallback, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import MainWrapper from "./Layout/MainWrapper";
 import AnimeItem from "./Components/Anime/AnimeItem";
 
 function App() {

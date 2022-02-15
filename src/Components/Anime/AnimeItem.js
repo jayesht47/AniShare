@@ -55,7 +55,7 @@ const AnimeItem = (props) => {
   console.log(animeData);
 
   // const ratingClickHandler = () => {
-  //   window.open(props.malLink);
+  //   window.open(props.malLink); //{specificRatingColorClassName}
   // };
 
   return (
@@ -76,7 +76,7 @@ const AnimeItem = (props) => {
           </span>
           <span>
             Rating : 
-            <span className={specificRatingColorClassName}>
+            <span className="text-[#bada55]"> 
               {animeData.averageRating}
             </span>
           </span>
