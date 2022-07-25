@@ -5,10 +5,13 @@ import Login from "./Components/Login/Login";
 import Header from "./Layout/Header";
 import AuthContext from "./Store/auth-context";
 import { useState, useCallback, useEffect } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import AnimeItem from "./Components/Anime/AnimeItem";
+import AnimeList from "./Components/Anime/AnimeList";
 
 function App() {
+  const navigate = useNavigate();
+
   const authContextData = useContext(AuthContext);
 
   const [animeList, setAnimeList] = useState([
@@ -261,28 +264,52 @@ function App() {
   let content = <p>No Anime Found</p>;
 
   if (animeList.length > 0)
-    content = <AnimeGrid userAnimeListData={animeList} userName="Jayesh" />;
+    content = <AnimeList userAnimeListData={animeList} userName="Jayesh" />;
 
   return (
     // <MainWrapper>
     <Fragment>
       <Header />
-      <Switch>
-        <Route path="/login">{!authContextData.isLoggedIn && <Login />}</Route>
-        <Route path="/list">
-          <Fragment>
-            {authContextData.isLoggedIn && <ListSummary userName="Jayesh" />}
-            {/* {authContextData.isLoggedIn && <AnimeList userName = "Jayesh"/>} */}
-            {authContextData.isLoggedIn && content}
-          </Fragment>
+      <Routes>
+        <Route
+          path="login"
+          element={
+            authContextData.isLoggedIn ? (
+              <Navigate to="list" replace={true} />
+            ) : (
+              <Login />
+            )
+          }
+        />
+        <Route
+          path="list"
+          element={
+            authContextData.isLoggedIn ? (
+              <>
+                <ListSummary userName="Jayesh" />
+                {content}
+              </>
+            ) : (
+              <Navigate to="/login" replace={true} />
+            )
+          }
+        >
+          <Route
+            path=":slug"
+            element={<AnimeItem />}
+          />
         </Route>
-        <Route path="/anime/:slug">
-          <AnimeItem userAnimeList={animeList} />
-        </Route>
-        <Route path="/" exact>
-          <Redirect to="/login" />
-        </Route>
-      </Switch>
+        <Route
+          path="*"
+          element={
+            authContextData.isLoggedIn ? (
+              <Navigate to="list" replace={true} />
+            ) : (
+              <Navigate to="login" replace={true} />
+            )
+          }
+        />
+      </Routes>
     </Fragment>
     // </MainWrapper>
   );

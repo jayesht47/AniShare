@@ -2,19 +2,18 @@
 // import { useCallback, useEffect, useState } from "react";
 import ImageCard from "../../UI/ImageCard";
 // import AnimeGridItem from "./AnimeGridItem";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AnimeGrid = (props) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const cardClickHandler = (animeData) => {
     console.log(animeData);
-    history.push({
-      pathname : `/anime/${animeData.slug}`,
-      state: { animeData: animeData }
+    navigate({
+      pathname: `/anime/${animeData.slug}`,
+      state: { animeData: animeData },
     });
   };
-
 
   return (
     <div className="mt-5 flex flex-row m-auto justify-center flex-wrap mx-5 ">

@@ -1,50 +1,27 @@
+import { Link, Outlet } from "react-router-dom";
 import Card from "../../UI/Card";
-import classes from "./AnimeList.module.css";
-import AnimeItem from "./AnimeItem";
+import AnimeRectCard from "./AnimeRectCard";
 
-const DUMMY_DATA = [
-  {
-    name: "Sword Art Online",
-    malRating: 6,
-    malLink: "https://myanimelist.net/anime/11757",
-    id: 11757,
-  },
-  {
-    name: "Tensei shitara Slime Datta Ken 2nd Season Part 2",
-    malRating: 8.52,
-    malLink: "https://myanimelist.net/anime/41487/",
-    id: 41487,
-  },
-  {
-    name: "Tantei wa Mou, Shindeiru.",
-    malRating: 7.52,
-    malLink: "https://myanimelist.net/anime/46471/",
-    id: 46471,
-  },
-  {
-    name: "Tantei wa Mou, Shindeiru.",
-    malRating: 7.52,
-    malLink: "https://myanimelist.net/anime/46471/",
-    id: 46471,
-  },
-];
+const AnimeList = ({ ...props }) => {
 
-const AnimeList = () => {
   return (
-    <section className={classes.animeList}>
-      <Card>
+    <>
+      <section className="">
         <div>
-          {DUMMY_DATA.map((element) => (
-            <AnimeItem
+          {props.userAnimeListData.map((element) => (
+            <AnimeRectCard
               key={element.id}
               name={element.name}
               malRating={element.malRating}
               malLink={element.malLink}
+              imageURI={element.posterImage.large}
+              slug={element.slug}
             />
           ))}
         </div>
-      </Card>
-    </section>
+      </section>
+      <Outlet />
+    </>
   );
 };
 

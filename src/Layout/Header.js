@@ -1,20 +1,20 @@
 import Button from "../UI/Button";
 import AuthContext from "../Store/auth-context";
 import { useContext } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const authContextData = useContext(AuthContext);
 
   const homeClickHandler = ()  =>{
-    history.replace("/list");
+    navigate("/list");
   }
 
   const logoutHandler = () => {
     authContextData.onLogout();
-    history.replace("/login");
+    navigate("/login");
   };
 
   return (

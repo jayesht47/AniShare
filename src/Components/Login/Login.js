@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 import Input from "../../UI/Input";
 import AuthContext from "../../Store/auth-context";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {
   const authContextData = useContext(AuthContext);
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -23,12 +23,15 @@ const Login = (props) => {
     console.info("Inside submit Handler");
     event.preventDefault();
     authContextData.onLogin(userName, password);
-    history.push("/list");
+    navigate("/list");
   };
 
   return (
     <div className="flex flex-col items-center xs:h-3/5">
-      <form onSubmit={submitHandler} className="m-auto w-1/5 lg:w-1/5 sm:w-3/5 xs:w-3/5 flex  flex-col">
+      <form
+        onSubmit={submitHandler}
+        className="m-auto w-1/5 lg:w-1/5 sm:w-3/5 xs:w-3/5 flex  flex-col"
+      >
         <Input
           type="text"
           label="User Name"

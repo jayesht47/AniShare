@@ -1,52 +1,43 @@
-import React,{ useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const AuthContext = React.createContext({
-    isLoggedIn : false,
-    onLogout : () =>  {},
-    onLogin : (userName,password) => {}
-}
-)
+  isLoggedIn: false,
+  onLogout: () => {},
+  onLogin: (userName, password) => {},
+});
 
-const AuthContextProvider = props =>{
+const AuthContextProvider = (props) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const [isLoggedIn , setIsLoggedIn]  = useState(false);
+  useEffect(() => {
+    const storedLoginInfo = localStorage.getItem("isLoggedIn");
 
-    useEffect(() => {
+    if (storedLoginInfo === "1") setIsLoggedIn(true);
+  }, []);
 
-        const storedLoginInfo = localStorage.getItem("isLoggedIn");
+  const logoutHandler = () => {
+    setIsLoggedIn(false);
+    localStorage.setItem("isLoggedIn", "0");
+  };
 
-        if(storedLoginInfo === '1') setIsLoggedIn(true);
+  const loginHandler = (userName, password) => {
+    console.info("Inside loginHandler");
+    setIsLoggedIn(true);
+    localStorage.setItem("isLoggedIn", "1");
+  };
 
-    },[]);
-
-    const logoutHandler = () =>{
-
-        setIsLoggedIn(false);
-        localStorage.setItem("isLoggedIn",'0');
-        
-    }
-
-    const loginHandler = (userName,password) =>{
-
-        console.info("Inside loginHandler");
-        setIsLoggedIn(true);
-        localStorage.setItem("isLoggedIn",'1');
-    }
-
-
-    return(
-        <AuthContext.Provider
-            value ={{
-                isLoggedIn:isLoggedIn,
-                onLogin : loginHandler,
-                onLogout : logoutHandler
-
-            }}>
-            {props.children}
-        </AuthContext.Provider>
-    );
-
-}
+  return (
+    <AuthContext.Provider
+      value={{
+        isLoggedIn: isLoggedIn,
+        onLogin: loginHandler,
+        onLogout: logoutHandler,
+      }}
+    >
+      {props.children}
+    </AuthContext.Provider>
+  );
+};
 
 export default AuthContext;
-export {AuthContextProvider};
+export { AuthContextProvider };
